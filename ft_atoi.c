@@ -30,17 +30,19 @@ static int	convert(const char *num_str, char sign)
 		{
 			if (number > LONG_MAX / 10)
 				return (-1);
-			number = number * 10 + (*num_str - '0');
-			if (LONG_MAX - number < 0)
+			number = number * 10;
+			if (number > LONG_MAX - (*num_str - '0'))
 				return (-1);
+			number += (*num_str - '0');
 		}
 		else
 		{
 			if (number < LONG_MIN / 10)
 				return (0);
-			number = number * 10 - (*num_str - '0');
-			if (LONG_MIN - number > 0)
+			number = number * 10;
+			if (number < LONG_MIN + (*num_str - '0'))
 				return (0);
+			number -= (*num_str - '0');
 		}
 		num_str++;
 	}
