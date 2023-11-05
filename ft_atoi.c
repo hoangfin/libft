@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 static int	is_space(char c)
 {
@@ -24,26 +22,29 @@ static int	is_space(char c)
 static int	convert(const char *num_str, char sign)
 {
 	long	number;
+
 	number = 0;
 	while (ft_isdigit(*num_str))
 	{
 		if (sign == '+')
 		{
-			number = number * 10 + *num_str - 48;
-			if (number < 0)
+			if (number > LONG_MAX / 10)
+				return (-1);
+			number = number * 10 + (*num_str - '0');
+			if (LONG_MAX - number < 0)
 				return (-1);
 		}
 		else
 		{
-			number = number * 10 - (*num_str - 48);
-			printf("%ld\n", number);
-			if (number > 0)
+			if (number < LONG_MIN / 10)
+				return (0);
+			number = number * 10 - (*num_str - '0');
+			if (LONG_MIN - number > 0)
 				return (0);
 		}
 		num_str++;
 	}
-	// printf("abcd%ld\n", number);
-	return (number);
+	return ((int)number);
 }
 
 /**
@@ -59,9 +60,7 @@ static int	convert(const char *num_str, char sign)
 int	ft_atoi(const char *str)
 {
 	char	sign;
-	long	number;
 
-	number = 0;
 	sign = '+';
 	while (is_space(*str))
 		str++;
@@ -71,10 +70,4 @@ int	ft_atoi(const char *str)
 		str++;
 	}
 	return (convert(str, sign));
-}
-
-int main(void)
-{
-	printf("atoi:%d\n", atoi("-92233720368547758081"));
-	printf("ft_atoi:%d\n", ft_atoi("-92233720368547758081"));
 }
