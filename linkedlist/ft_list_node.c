@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_list_node.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoatran <hoatran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 15:56:46 by hoatran           #+#    #+#             */
-/*   Updated: 2024/03/05 17:08:11 by hoatran          ###   ########.fr       */
+/*   Created: 2024/01/02 21:23:26 by hoatran           #+#    #+#             */
+/*   Updated: 2024/01/19 00:39:31 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft_list.h"
 
-# include "common/libft_common.h"
-# include "array/libft_array.h"
-# include "string/libft_string.h"
-# include "linkedlist/libft_list.h"
-# include "gnl/get_next_line.h"
-# include "printf/ft_printf.h"
+t_node	*ft_list_node(void *data)
+{
+	t_node	*node;
 
-#endif
+	node = (t_node *)malloc(sizeof(t_node));
+	if (node != NULL)
+	{
+		node->data = data;
+		node->next = NULL;
+		node->prev = NULL;
+	}
+	return (node);
+}

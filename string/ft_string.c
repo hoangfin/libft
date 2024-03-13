@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_string.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoatran <hoatran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 15:56:46 by hoatran           #+#    #+#             */
-/*   Updated: 2024/03/05 17:08:11 by hoatran          ###   ########.fr       */
+/*   Created: 2024/01/18 16:40:34 by hoatran           #+#    #+#             */
+/*   Updated: 2024/01/19 00:40:28 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft_string.h"
 
-# include "common/libft_common.h"
-# include "array/libft_array.h"
-# include "string/libft_string.h"
-# include "linkedlist/libft_list.h"
-# include "gnl/get_next_line.h"
-# include "printf/ft_printf.h"
+t_string	*ft_string(char *str)
+{
+	t_string	*string;
 
-#endif
+	string = (t_string *)malloc(sizeof(t_string));
+	if (string != NULL)
+	{
+		string->content = str;
+		string->length = ft_strlen(str);
+	}
+	return (string);
+}

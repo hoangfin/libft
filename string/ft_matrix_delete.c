@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_grid_delete.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoatran <hoatran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 15:56:46 by hoatran           #+#    #+#             */
-/*   Updated: 2024/03/05 17:08:11 by hoatran          ###   ########.fr       */
+/*   Created: 2024/02/18 10:17:30 by hoatran           #+#    #+#             */
+/*   Updated: 2024/02/20 17:45:41 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft_string.h"
 
-# include "common/libft_common.h"
-# include "array/libft_array.h"
-# include "string/libft_string.h"
-# include "linkedlist/libft_list.h"
-# include "gnl/get_next_line.h"
-# include "printf/ft_printf.h"
+void	ft_matrix_delete(char ***matrix)
+{
+	int	i;
 
-#endif
+	if (*matrix == NULL)
+		return ;
+	i = 0;
+	while ((*matrix)[i] != NULL)
+		free((*matrix)[i++]);
+	free(*matrix);
+	*matrix = NULL;
+}

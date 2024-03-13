@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoatran <hoatran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 15:56:46 by hoatran           #+#    #+#             */
-/*   Updated: 2024/03/05 17:08:11 by hoatran          ###   ########.fr       */
+/*   Created: 2024/01/17 11:12:06 by hoatran           #+#    #+#             */
+/*   Updated: 2024/01/17 11:27:59 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+int	ft_strcmp(const char *s1, const char *s2)
+{
+	const unsigned char	*str1 = (unsigned char *)s1;
+	const unsigned char	*str2 = (unsigned char *)s2;
+	int					diff;
 
-# include "common/libft_common.h"
-# include "array/libft_array.h"
-# include "string/libft_string.h"
-# include "linkedlist/libft_list.h"
-# include "gnl/get_next_line.h"
-# include "printf/ft_printf.h"
-
-#endif
+	diff = *str1 - *str2;
+	while (*str1 != '\0' && *str2 != '\0')
+	{
+		diff = *str1 - *str2;
+		if (diff != 0)
+			break ;
+		str1++;
+		str2++;
+	}
+	return (diff);
+}
