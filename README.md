@@ -22,6 +22,14 @@ Libft is a crucial project since this library will be used extensively in future
 		<td></td>
 	</tr>
 	<tr>
+		<td>ft_string.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_count_digits.c</td>
+		<td></td>
+	</tr>
+	<tr>
 		<td>ft_matrix.c</td>
 		<td></td>
 	</tr>
@@ -89,19 +97,32 @@ Libft is a crucial project since this library will be used extensively in future
 		<td>ft_strtrim.c</td>
 		<td></td>
 	</tr>
+	<tr>
+		<td>ft_split.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_itoa.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_utoa.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_ultoa.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_strmapi.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_striteri.c</td>
+		<td></td>
+	</tr>
 
 </table>
-```
-ft_matrix_print.c
-ft_string.c
-ft_count_digits.c
-ft_split.c
-ft_itoa.c
-ft_utoa.c
-ft_ultoa.c
-ft_strmapi.c
-ft_striteri.c
-```
 
 ### Linked list
 ```
