@@ -6,14 +6,70 @@ Libft is a crucial project since this library will be used extensively in future
 
 ## Implemented functions
 
-### String
+### String Manipulation
+
+<table>
+	<tr>
+		<th>Functions</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>ft_ends_with.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_starts_with.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_matrix_count_rows.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_matrix_delete.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_matrix.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+
+</table>
 ```
-ft_ends_with.c
-ft_matrix_count_rows.c
-ft_matrix_delete.c
+
 ft_matrix_print.c
-ft_matrix.c
-ft_starts_with.c
 ft_strdup_chr.c
 ft_string.c
 ft_count_digits.c
@@ -45,12 +101,12 @@ ft_list_clear.c
 ft_list_every.c
 ft_list_floor_index.c
 ft_list_foreach.c
-t_list_map.c
+ft_list_map.c
 ft_list_node.c
 ft_list_push.c
 ft_list_reduce.c
 ft_list_shift.c
 ft_list_some.c
 ft_list_unshift.c
-t_list.c
+ft_list.c
 ```
