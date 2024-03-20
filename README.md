@@ -124,19 +124,63 @@ Libft is a crucial project since this library will be used extensively in future
 
 </table>
 
-### Linked list
-```
-ft_list_ceil_index.c
-ft_list_clear.c
-ft_list_every.c
-ft_list_floor_index.c
-ft_list_foreach.c
-ft_list_map.c
-ft_list_node.c
-ft_list_push.c
-ft_list_reduce.c
-ft_list_shift.c
-ft_list_some.c
-ft_list_unshift.c
-ft_list.c
-```
+### Linked List
+
+<table>
+	<tr>
+		<th>Functions</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>ft_list_ceil_index.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_list_clear.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_list_every.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_list_floor_index.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_list_foreach.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_list_map.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_list_node.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_list_push.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_list_reduce.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_list_shift.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_list_some.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_list_unshift.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_list.c</td>
+		<td></td>
+	</tr>
+</table>
