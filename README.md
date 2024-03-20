@@ -22,7 +22,7 @@ Libft is a crucial project since this library will be used extensively in future
 		<td></td>
 	</tr>
 	<tr>
-		<td>ft_matrix_count_rows.c</td>
+		<td>ft_matrix.c</td>
 		<td></td>
 	</tr>
 	<tr>
@@ -30,62 +30,71 @@ Libft is a crucial project since this library will be used extensively in future
 		<td></td>
 	</tr>
 	<tr>
-		<td>ft_matrix.c</td>
+		<td>ft_matrix_count_rows.c</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>.c</td>
+		<td>ft_strdup_chr.c</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>.c</td>
+		<td>ft_strlen.c</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>.c</td>
+		<td>ft_strlcpy.c</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>.c</td>
+		<td>ft_strlcat.c</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>.c</td>
+		<td>ft_strchr.c</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>.c</td>
+		<td>ft_strrchr.c</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>ft_strnstr.c</td>
 		<td></td>
 	</tr>
 	<tr>
+		<td>ft_strcmp.c</td>
 		<td></td>
+	</tr>
+	<tr>
+		<td>ft_strncmp.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_strdup.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_substr.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_strjoin.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_join_string.c</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>ft_strtrim.c</td>
 		<td></td>
 	</tr>
 
 </table>
 ```
-
 ft_matrix_print.c
-ft_strdup_chr.c
 ft_string.c
 ft_count_digits.c
-ft_strlen.c
-ft_strlcpy.c
-ft_strlcat.c
-ft_strchr.c
-ft_strrchr.c
-ft_strnstr.c
-ft_strcmp.c
-ft_strncmp.c
-ft_strdup.c
-ft_substr.c
-ft_strjoin.c
-ft_join_string.c
-ft_strtrim.c
 ft_split.c
 ft_itoa.c
 ft_utoa.c
