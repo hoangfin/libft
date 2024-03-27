@@ -17,15 +17,15 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(COMMON_DIR)/ft_atol.c \
 			$(COMMON_DIR)/ft_bzero.c \
 			$(COMMON_DIR)/ft_calloc.c \
+			$(COMMON_DIR)/ft_count_digits.c \
 			$(COMMON_DIR)/ft_isalnum.c \
 			$(COMMON_DIR)/ft_isalpha.c \
-			$(COMMON_DIR)/ft_isspace.c \
 			$(COMMON_DIR)/ft_isascii.c \
 			$(COMMON_DIR)/ft_isdigit.c \
 			$(COMMON_DIR)/ft_isprint.c \
+			$(COMMON_DIR)/ft_isspace.c \
 			$(COMMON_DIR)/ft_itoa.c \
-			$(COMMON_DIR)/ft_utoa.c \
-			$(COMMON_DIR)/ft_ultoa.c \
+			$(COMMON_DIR)/ft_join_string.c \
 			$(COMMON_DIR)/ft_memchr.c \
 			$(COMMON_DIR)/ft_memcmp.c \
 			$(COMMON_DIR)/ft_memcpy.c \
@@ -37,36 +37,37 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(COMMON_DIR)/ft_putstr_fd.c \
 			$(COMMON_DIR)/ft_putstrchr_fd.c \
 			$(COMMON_DIR)/ft_split.c \
-			$(COMMON_DIR)/ft_count_digits.c \
 			$(COMMON_DIR)/ft_strchr.c \
+			$(COMMON_DIR)/ft_strcmp.c \
 			$(COMMON_DIR)/ft_strdup.c \
 			$(COMMON_DIR)/ft_striteri.c \
 			$(COMMON_DIR)/ft_strjoin.c \
-			$(COMMON_DIR)/ft_join_string.c \
 			$(COMMON_DIR)/ft_strlcat.c \
 			$(COMMON_DIR)/ft_strlcpy.c \
 			$(COMMON_DIR)/ft_strlen.c \
 			$(COMMON_DIR)/ft_strmapi.c \
-			$(COMMON_DIR)/ft_strcmp.c \
 			$(COMMON_DIR)/ft_strncmp.c \
 			$(COMMON_DIR)/ft_strnstr.c \
 			$(COMMON_DIR)/ft_strrchr.c \
 			$(COMMON_DIR)/ft_strtrim.c \
 			$(COMMON_DIR)/ft_substr.c \
-			$(COMMON_DIR)/ft_tolower.c \
-			$(COMMON_DIR)/ft_toupper.c \
 			$(COMMON_DIR)/ft_tolower_str.c \
+			$(COMMON_DIR)/ft_tolower.c \
 			$(COMMON_DIR)/ft_toupper_str.c \
+			$(COMMON_DIR)/ft_toupper.c \
+			$(COMMON_DIR)/ft_ultoa.c \
+			$(COMMON_DIR)/ft_utoa.c \
 			\
-			$(STRING_DIR)/ft_string.c \
-			$(STRING_DIR)/ft_replace.c \
+			$(STRING_DIR)/ft_del_str_array.c \
 			$(STRING_DIR)/ft_ends_with.c \
-			$(STRING_DIR)/ft_starts_with.c \
-			$(STRING_DIR)/ft_strdup_chr.c \
-			$(STRING_DIR)/ft_matrix.c \
+			$(STRING_DIR)/ft_matrix_count_rows.c \
 			$(STRING_DIR)/ft_matrix_delete.c \
 			$(STRING_DIR)/ft_matrix_print.c \
-			$(STRING_DIR)/ft_matrix_count_rows.c \
+			$(STRING_DIR)/ft_matrix.c \
+			$(STRING_DIR)/ft_replace.c \
+			$(STRING_DIR)/ft_starts_with.c \
+			$(STRING_DIR)/ft_strdup_chr.c \
+			$(STRING_DIR)/ft_string.c \
 			\
 			$(ARRAY_DIR)/ft_array.c \
 			$(ARRAY_DIR)/ft_array_from.c \
