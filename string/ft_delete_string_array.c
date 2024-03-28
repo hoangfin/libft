@@ -6,24 +6,30 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 22:15:00 by hoatran           #+#    #+#             */
-/*   Updated: 2024/03/27 22:25:40 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/03/28 10:19:43 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_string.h"
 
-void	ft_del_str_array(char ***str_array)
+/**
+ * This function will delete the specified strings array and set it to NULL.
+ *
+ * @param	{char***} p_array The address of strings array.
+ * @returns	{void}
+*/
+void	ft_delete_string_array(char ***p_array)
 {
-	char	**current;
+	char	**p_string;
 
-	if (str_array == NULL)
+	if (p_array == NULL)
 		return ;
-	current = *str_array;
-	while (current != NULL && *current != NULL)
+	p_string = *p_array;
+	while (p_string != NULL && *p_string != NULL)
 	{
-		free(*current);
-		current++;
+		free(*p_string);
+		p_string++;
 	}
-	free(*str_array);
-	*str_array = NULL;
+	free(*p_array);
+	*p_array = NULL;
 }

@@ -58,7 +58,7 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(COMMON_DIR)/ft_ultoa.c \
 			$(COMMON_DIR)/ft_utoa.c \
 			\
-			$(STRING_DIR)/ft_del_str_array.c \
+			$(STRING_DIR)/ft_delete_string_array.c \
 			$(STRING_DIR)/ft_ends_with.c \
 			$(STRING_DIR)/ft_matrix_count_rows.c \
 			$(STRING_DIR)/ft_matrix_delete.c \
