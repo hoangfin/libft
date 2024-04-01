@@ -68,6 +68,7 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(STRING_DIR)/ft_starts_with.c \
 			$(STRING_DIR)/ft_strdup_chr.c \
 			$(STRING_DIR)/ft_string.c \
+			$(STRING_DIR)/ft_parse_cmd.c \
 			\
 			$(ARRAY_DIR)/ft_array.c \
 			$(ARRAY_DIR)/ft_array_from.c \
