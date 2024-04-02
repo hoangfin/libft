@@ -6,13 +6,14 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:43:41 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/02 17:00:34 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/03 00:20:03 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_STRING_H
 # define LIBFT_STRING_H
 
+# include <stdarg.h>
 # include "../common/libft_common.h"
 
 typedef struct s_string
@@ -40,5 +41,6 @@ void		ft_matrix_delete(char ***matrix);
 void		ft_matrix_print(char **matrix);
 char		**ft_parse_cmd(const char *cmd);
 char		*ft_get_env_var(const char *var_key, char **envp);
+char		*ft_join_strings(int num_of_strings, ...);
 
 #endif
