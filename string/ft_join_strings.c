@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 23:50:37 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/03 11:48:21 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/03 12:05:40 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ static void	fill(char *string, va_list args, int args_length)
 			string++;
 			temp++;
 		}
-		string++;
 		i++;
 	}
 	*string = '\0';
