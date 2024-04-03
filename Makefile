@@ -62,7 +62,6 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(STRING_DIR)/ft_ends_with.c \
 			$(STRING_DIR)/ft_matrix_count_rows.c \
 			$(STRING_DIR)/ft_matrix_delete.c \
-			$(STRING_DIR)/ft_matrix_print.c \
 			$(STRING_DIR)/ft_matrix.c \
 			$(STRING_DIR)/ft_replace.c \
 			$(STRING_DIR)/ft_starts_with.c \
