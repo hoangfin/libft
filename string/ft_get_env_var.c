@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 16:56:21 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/02 17:00:15 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/03 14:35:05 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char	*ft_get_env_var(const char *var_key, char **envp)
 				return (NULL);
 			return (ft_strdup(temp + 1));
 		}
+		envp++;
 	}
 	return (NULL);
 }
