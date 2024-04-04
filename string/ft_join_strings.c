@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 23:50:37 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/03 12:05:40 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/04 21:08:34 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,13 +55,13 @@ char	*ft_join_strings(int num_of_strings, ...)
 	char	*string;
 
 	va_start(args_1, num_of_strings);
+	va_copy(args_2, args_1);
 	bytes = count_total_bytes(args_1, num_of_strings);
-	va_end(args_1);
 	string = (char *)malloc((bytes + 1) * sizeof(char));
 	if (string == NULL)
 		return (NULL);
-	va_start(args_2, num_of_strings);
 	fill(string, args_2, num_of_strings);
+	va_end(args_1);
 	va_end(args_2);
 	return (string);
 }
