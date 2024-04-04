@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 22:44:40 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/04 12:00:47 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/04 14:12:29 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ void	ft_trim_quotes(char	*str)
 		return ;
 	start = 0;
 	end = length - 1;
-	while (
-		(str[start] == 34 || str[start] == 39)
-		&& str[end] == str[start] && end > start)
+	if ((str[start] == 34 || str[start] == 39) && str[end] == str[start])
 	{
 		start++;
 		end--;
