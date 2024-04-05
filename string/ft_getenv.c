@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_del_str_array.c                                 :+:      :+:    :+:   */
+/*   ft_getenv.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/27 22:15:00 by hoatran           #+#    #+#             */
-/*   Updated: 2024/03/28 10:19:43 by hoatran          ###   ########.fr       */
+/*   Created: 2024/04/02 16:56:21 by hoatran           #+#    #+#             */
+/*   Updated: 2024/04/05 21:16:51 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_string.h"
 
-/**
- * This function will delete the specified strings array and set it to NULL.
- *
- * @param	{char***} p_array The address of strings array.
- * @returns	{void}
-*/
-void	ft_delete_string_array(char ***p_array)
+char	*ft_getenv(const char *key, char **envp)
 {
-	char	**p_string;
+	size_t	length;
+	char	*temp;
 
-	if (p_array == NULL)
-		return ;
-	p_string = *p_array;
-	while (p_string != NULL && *p_string != NULL)
+	length = ft_strlen(key);
+	while (envp != NULL && *envp != NULL)
 	{
-		free(*p_string);
-		p_string++;
+		if (ft_strncmp(*envp, key, length) == 0)
+		{
+			temp = ft_strchr(*envp, '=');
+			if (temp == NULL)
+				return (NULL);
+			return (ft_strdup(temp + 1));
+		}
+		envp++;
 	}
-	free(*p_array);
-	*p_array = NULL;
+	return (NULL);
 }
