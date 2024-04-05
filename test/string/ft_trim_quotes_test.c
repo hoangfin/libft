@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 12:16:58 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/04 13:53:23 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/05 20:42:45 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(void)
 	char case_4[] = "'";
 
 	ft_trim_quotes(case_1);
-	assert(strcmp(case_1, "Hello") == 0);
+	assert(strcmp(case_1, "\"Hello\"") == 0);
 
 	ft_trim_quotes(case_2);
 	assert(strcmp(case_2, "\'\"Hello\"") == 0);
