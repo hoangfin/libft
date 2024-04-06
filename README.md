@@ -14,13 +14,13 @@ Libft is a crucial project since this library will be used extensively in future
 		<th>Description</th>
 	</tr>
 	<tr>
-		<td>ft_ends_with.c</td>
-		<td></td>
+		<td>ft_starts_with.c</td>
+		<td>Check whether a string begins with the characters of a specified string, returning true or false as appropriate.</td>
 	</tr>
 	<tr>
-		<td>ft_starts_with.c</td>
-		<td></td>
-	</tr>
+		<td>ft_ends_with.c</td>
+		<td>Check whether a string ends with the characters of a specified string, returning true or false as appropriate.</td>
+	</tr>	
 	<tr>
 		<td>ft_string.c</td>
 		<td></td>
@@ -99,7 +99,7 @@ Libft is a crucial project since this library will be used extensively in future
 	</tr>
 	<tr>
 		<td>ft_split.c</td>
-		<td></td>
+		<td>Split a string based on a specified character into an array of sub-strings, returning array at the end.</td>
 	</tr>
 	<tr>
 		<td>ft_itoa.c</td>
