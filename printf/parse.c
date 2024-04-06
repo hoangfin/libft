@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoatran <hoatran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 00:15:42 by hoatran           #+#    #+#             */
-/*   Updated: 2024/03/05 17:03:02 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/06 21:38:25 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,9 @@ static void	parse_prec(const char **format, t_print_format *pf, va_list args)
 		pf->is_malformed = 1;
 }
 
-void	parse(const char *format, t_print_format *pf, va_list args)
+void	parse(int fd, const char *format, t_print_format *pf, va_list args)
 {
+	pf->fd = fd;
 	pf->flag = 0;
 	pf->width = 0;
 	pf->has_period = 0;

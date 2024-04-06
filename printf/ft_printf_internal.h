@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_internal.h                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoatran <hoatran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 14:30:10 by hoatran           #+#    #+#             */
-/*   Updated: 2024/03/05 17:05:04 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/06 21:38:53 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef enum e_print_flag
 
 typedef struct s_print_format
 {
+	int				fd;
 	t_print_flag	flag;
 	int				width;
 	char			has_period;
@@ -41,7 +42,7 @@ typedef struct s_print_format
 typedef int	(*t_print_service)(t_print_format, va_list);
 
 t_print_flag	get_printf_flag(char c);
-void			parse(const char *format, t_print_format *pf, va_list args);
+void			parse(int fd, const char *format, t_print_format *pf, va_list args);
 int				is_flag(char c);
 int				is_conversion(char c);
 int				print_c(t_print_format pf, va_list args);

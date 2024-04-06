@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_d.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoatran <hoatran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 16:16:35 by hoatran           #+#    #+#             */
-/*   Updated: 2024/03/05 17:03:02 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/06 22:16:51 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@ static int	print_left(char sign, char *buf, int buf_len, t_print_format pf)
 	count = 0;
 	if (sign)
 	{
-		if (ft_putchar_fd(sign, 1) < 0)
+		if (ft_putchar_fd(sign, pf.fd) < 0)
 			return (-1);
 		count++;
 	}
-	if (ft_putstrchr_fd('0', pf.precision - buf_len, 1) < 0)
+	if (ft_putstrchr_fd('0', pf.precision - buf_len, pf.fd) < 0)
 		return (-1);
 	count += pf.precision - buf_len;
-	if (write(1, buf, buf_len) < 0)
+	if (write(pf.fd, buf, buf_len) < 0)
 		return (-1);
 	count += buf_len;
 	if (count > pf.width)
 		return (count);
-	if (ft_putstrchr_fd(' ', pf.width - count, 1) < 0)
+	if (ft_putstrchr_fd(' ', pf.width - count, pf.fd) < 0)
 		return (-1);
 	return (pf.width);
 }
@@ -43,20 +43,20 @@ static int	print_zero_pad(char sign, char *data, int d_len, t_print_format pf)
 	count = 0;
 	if (sign)
 	{
-		if (ft_putchar_fd(sign, 1) < 0)
+		if (ft_putchar_fd(sign, pf.fd) < 0)
 			return (-1);
 		count++;
 	}
 	if (pf.width > count + pf.precision)
 	{
-		if (ft_putstrchr_fd('0', pf.width - count - pf.precision, 1) < 0)
+		if (ft_putstrchr_fd('0', pf.width - count - pf.precision, pf.fd) < 0)
 			return (-1);
 		count = pf.width - pf.precision;
 	}
-	if (ft_putstrchr_fd('0', pf.precision - d_len, 1) < 0)
+	if (ft_putstrchr_fd('0', pf.precision - d_len, pf.fd) < 0)
 		return (-1);
 	count += pf.precision - d_len;
-	if (write(1, data, d_len) < 0)
+	if (write(pf.fd, data, d_len) < 0)
 		return (-1);
 	count += d_len;
 	return (count);
@@ -73,19 +73,19 @@ static int	print(char sign, char *data, int d_len, t_print_format pf)
 		count++;
 	if (pf.width > count + pf.precision)
 	{
-		if (ft_putstrchr_fd(' ', pf.width - count - pf.precision, 1) < 0)
+		if (ft_putstrchr_fd(' ', pf.width - count - pf.precision, pf.fd) < 0)
 			return (-1);
 		count = pf.width - pf.precision;
 	}
 	if (sign)
 	{
-		if (ft_putchar_fd(sign, 1) < 0)
+		if (ft_putchar_fd(sign, pf.fd) < 0)
 			return (-1);
 	}
-	if (ft_putstrchr_fd('0', pf.precision - d_len, 1) < 0)
+	if (ft_putstrchr_fd('0', pf.precision - d_len, pf.fd) < 0)
 		return (-1);
 	count += pf.precision - d_len;
-	if (write(1, data, d_len) < 0)
+	if (write(pf.fd, data, d_len) < 0)
 		return (-1);
 	count += d_len;
 	return (count);
