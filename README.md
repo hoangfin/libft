@@ -124,6 +124,23 @@ Libft is a crucial project since this library will be used extensively in future
 
 </table>
 
+### Format and print data
+
+<table>
+	<tr>
+		<th>Functions</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>ft_printf</td>
+		<td>Print argument(s) to standard output according to format</td>
+	</tr>
+	<tr>
+		<td>ft_fprintf</td>
+		<td>Print argument(s) to a specified file descriptor according to format</td>
+	</tr>
+</table>
+
 ### Linked List
 
 <table>
