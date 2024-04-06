@@ -95,6 +95,7 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(GNL_DIR)/get_next_line.c \
 			\
 			$(PRINTF_DIR)/ft_printf.c \
+			$(PRINTF_DIR)/ft_fprintf.c \
 			$(PRINTF_DIR)/ft_printf.h \
 			$(PRINTF_DIR)/get_printf_flag.c \
 			$(PRINTF_DIR)/is_conversion.c \
