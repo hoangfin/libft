@@ -6,13 +6,18 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 21:30:14 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/06 21:37:52 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/07 18:20:22 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf_internal.h"
 
-static int	print_format(int fd, char const **format, va_list args, t_print_service *ps)
+static int	print_format(
+	int fd,
+	char const **format,
+	va_list args,
+	t_print_service *ps
+)
 {
 	const char		*sup_cvs = SUP_CONVERSIONS;
 	const char		*conversion = NULL;
@@ -41,7 +46,12 @@ static int	print_format(int fd, char const **format, va_list args, t_print_servi
 	return (count);
 }
 
-static int	print(int fd, const char **format, va_list args, t_print_service *ps)
+static int	print(
+	int fd,
+	const char **format,
+	va_list args,
+	t_print_service *ps
+)
 {
 	int			printed_chars_count;
 	int			count;
