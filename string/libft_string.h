@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:43:41 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/05 21:17:07 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/10 22:40:53 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ size_t		ft_matrix_count_rows(char **matrix);
 void		ft_matrix_delete(char ***matrix);
 char		**ft_parse_cmd(const char *cmd);
 char		*ft_getenv(const char *key, char **envp);
+char		*ft_join(const char **strings, const char *delim);
 char		*ft_join_strings(int num_of_strings, ...);
 void		ft_trim_quotes(char	*str);
 

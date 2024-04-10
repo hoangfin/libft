@@ -25,7 +25,6 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(COMMON_DIR)/ft_isprint.c \
 			$(COMMON_DIR)/ft_isspace.c \
 			$(COMMON_DIR)/ft_itoa.c \
-			$(COMMON_DIR)/ft_join_string.c \
 			$(COMMON_DIR)/ft_memchr.c \
 			$(COMMON_DIR)/ft_memcmp.c \
 			$(COMMON_DIR)/ft_memcpy.c \
@@ -69,6 +68,7 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(STRING_DIR)/ft_string.c \
 			$(STRING_DIR)/ft_parse_cmd.c \
 			$(STRING_DIR)/ft_getenv.c \
+			$(STRING_DIR)/ft_join.c \
 			$(STRING_DIR)/ft_join_strings.c \
 			$(STRING_DIR)/ft_trim_quotes.c \
 			\

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_join_string.c                                   :+:      :+:    :+:   */
+/*   ft_join.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 16:36:25 by hoatran           #+#    #+#             */
-/*   Updated: 2024/01/19 00:37:57 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/10 22:39:52 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static size_t	get_total_length(const char **strings, const char *delim)
 	return (total_length);
 }
 
-char	*ft_join_string(const char **strings, const char *delim)
+char	*ft_join(const char **strings, const char *delim)
 {
 	size_t	total_length;
 	char	*joined_str;
