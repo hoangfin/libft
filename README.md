@@ -79,19 +79,19 @@ Libft is a crucial project since this library will be used extensively in future
 	</tr>
 	<tr>
 		<td>ft_strdup.c</td>
-		<td></td>
+		<td>Duplicate a string.</td>
 	</tr>
 	<tr>
 		<td>ft_substr.c</td>
-		<td></td>
+		<td>Returns a specified substring from a string.</td>
 	</tr>
 	<tr>
 		<td>ft_strjoin.c</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>ft_join_string.c</td>
-		<td></td>
+		<td>ft_join_strings.c</td>
+		<td>Join multiple strings into single string.</td>
 	</tr>
 	<tr>
 		<td>ft_strtrim.c</td>
@@ -103,15 +103,15 @@ Libft is a crucial project since this library will be used extensively in future
 	</tr>
 	<tr>
 		<td>ft_itoa.c</td>
-		<td></td>
+		<td>Convert an integer to its string format.</td>
 	</tr>
 	<tr>
 		<td>ft_utoa.c</td>
-		<td></td>
+		<td>Convert an unsigned integer to its string format.</td>
 	</tr>
 	<tr>
 		<td>ft_ultoa.c</td>
-		<td></td>
+		<td>Convert an unsigned long to its string format.</td>
 	</tr>
 	<tr>
 		<td>ft_strmapi.c</td>
