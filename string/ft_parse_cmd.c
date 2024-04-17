@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 20:53:07 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/17 12:18:36 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/17 16:53:04 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,14 @@ char	**ft_parse_cmd(const char *cmd)
 	dup = ft_strdup(cmd);
 	if (dup == NULL)
 		return (NULL);
+	if (*dup == '\0' || ft_has_spaces_only(dup))
+	{
+		tokens = (char **)ft_calloc(2, sizeof(char *));
+		if (tokens == NULL)
+			return (NULL);
+		tokens[0] = dup;
+		return (tokens);
+	}
 	tokens = split_cmd(dup);
 	free(dup);
 	if (tokens == NULL)

@@ -6,11 +6,11 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 16:36:25 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/10 22:39:52 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/17 14:22:15 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_common.h"
+#include "libft_string.h"
 
 static size_t	get_total_length(const char **strings, const char *delim)
 {

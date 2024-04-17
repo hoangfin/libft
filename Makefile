@@ -71,6 +71,7 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(STRING_DIR)/ft_join.c \
 			$(STRING_DIR)/ft_join_strings.c \
 			$(STRING_DIR)/ft_trim_quotes.c \
+			$(STRING_DIR)/ft_has_spaces_only.c \
 			\
 			$(ARRAY_DIR)/ft_array.c \
 			$(ARRAY_DIR)/ft_array_from.c \
