@@ -59,19 +59,19 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			\
 			$(STRING_DIR)/ft_del_str_arr.c \
 			$(STRING_DIR)/ft_ends_with.c \
+			$(STRING_DIR)/ft_getenv.c \
+			$(STRING_DIR)/ft_has_spaces_only.c \
+			$(STRING_DIR)/ft_join_strings.c \
+			$(STRING_DIR)/ft_join.c \
 			$(STRING_DIR)/ft_matrix_count_rows.c \
 			$(STRING_DIR)/ft_matrix_delete.c \
 			$(STRING_DIR)/ft_matrix.c \
+			$(STRING_DIR)/ft_parse_cmd.c \
 			$(STRING_DIR)/ft_replace.c \
 			$(STRING_DIR)/ft_starts_with.c \
 			$(STRING_DIR)/ft_strdup_chr.c \
 			$(STRING_DIR)/ft_string.c \
-			$(STRING_DIR)/ft_parse_cmd.c \
-			$(STRING_DIR)/ft_getenv.c \
-			$(STRING_DIR)/ft_join.c \
-			$(STRING_DIR)/ft_join_strings.c \
 			$(STRING_DIR)/ft_trim_quotes.c \
-			$(STRING_DIR)/ft_has_spaces_only.c \
 			\
 			$(ARRAY_DIR)/ft_array.c \
 			$(ARRAY_DIR)/ft_array_from.c \
@@ -79,24 +79,25 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(ARRAY_DIR)/ft_every.c \
 			$(ARRAY_DIR)/ft_some.c \
 			\
-			$(LIST_DIR)/ft_list.c \
+			$(LIST_DIR)/ft_list_ceil_index.c \
+			$(LIST_DIR)/ft_list_clear.c \
+			$(LIST_DIR)/ft_list_every.c \
+			$(LIST_DIR)/ft_list_floor_index.c \
+			$(LIST_DIR)/ft_list_foreach.c \
+			$(LIST_DIR)/ft_list_index_of.c \
+			$(LIST_DIR)/ft_list_map.c \
 			$(LIST_DIR)/ft_list_node.c \
 			$(LIST_DIR)/ft_list_push.c \
 			$(LIST_DIR)/ft_list_reduce.c \
 			$(LIST_DIR)/ft_list_shift.c \
-			$(LIST_DIR)/ft_list_unshift.c \
-			$(LIST_DIR)/ft_list_foreach.c \
-			$(LIST_DIR)/ft_list_every.c \
-			$(LIST_DIR)/ft_list_ceil_index.c \
-			$(LIST_DIR)/ft_list_floor_index.c \
 			$(LIST_DIR)/ft_list_some.c \
-			$(LIST_DIR)/ft_list_map.c \
-			$(LIST_DIR)/ft_list_clear.c \
+			$(LIST_DIR)/ft_list_unshift.c \
+			$(LIST_DIR)/ft_list.c \
 			\
 			$(GNL_DIR)/get_next_line.c \
 			\
-			$(PRINTF_DIR)/ft_printf.c \
 			$(PRINTF_DIR)/ft_fprintf.c \
+			$(PRINTF_DIR)/ft_printf.c \
 			$(PRINTF_DIR)/ft_printf.h \
 			$(PRINTF_DIR)/get_printf_flag.c \
 			$(PRINTF_DIR)/is_conversion.c \

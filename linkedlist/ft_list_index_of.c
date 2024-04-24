@@ -6,13 +6,14 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 17:18:59 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/23 23:26:40 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/24 14:11:07 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_list.h"
 
-int	ft_list_index_of(t_list *list, void *data, t_bool (*pre)(t_node *, void *))
+int	ft_list_index_of(t_list *list, void *data, t_bool (*pred)(t_node *, void *)
+)
 {
 	int		i;
 	t_node	*node;
@@ -21,7 +22,7 @@ int	ft_list_index_of(t_list *list, void *data, t_bool (*pre)(t_node *, void *))
 	node = list->head;
 	while (i < (int)list->length)
 	{
-		if (pre(node, data))
+		if (pred(node, data))
 			return (i);
 		node = node->next;
 		i++;
