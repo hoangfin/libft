@@ -102,7 +102,7 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(PRINTF_DIR)/get_printf_flag.c \
 			$(PRINTF_DIR)/is_conversion.c \
 			$(PRINTF_DIR)/is_flag.c \
-			$(PRINTF_DIR)/parse.c \
+			$(PRINTF_DIR)/ft_printf_parse.c \
 			$(PRINTF_DIR)/print_c.c \
 			$(PRINTF_DIR)/print_d.c \
 			$(PRINTF_DIR)/print_p.c \
