@@ -10,7 +10,7 @@ PRINTF_DIR := ./printf
 
 # Compiler & flags
 CC := cc
-CFLAGS := -Wall -Wextra -Werror
+CFLAGS := -g -Wall -Wextra -Werror
 
 # Source files
 SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
