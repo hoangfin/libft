@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 01:42:56 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/27 20:09:58 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/27 20:20:12 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_for_each(
 )
 {
 	size_t	i;
-	char	*element_ptr;
+	void	*element_ptr;
 
 	if (array == NULL || element_count == 0 || callback == NULL)
 		return ;
