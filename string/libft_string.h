@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:43:41 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/17 16:47:37 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/28 02:17:25 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ t_string	*ft_string(char *str);
 t_bool		ft_ends_with(const char *string, const char *search_string);
 t_bool		ft_starts_with(const char *string, const char *search_string);
 char		*ft_strdup_chr(char *source, char delimiter);
-void		ft_replace(char *str, const char *c_array, int c);
+void		ft_replace(char *str, size_t size, const char *chars, int c);
 char		**ft_matrix(size_t row_count, size_t col_count, int c);
 void		ft_del_str_arr(char ***p_array);
 size_t		ft_matrix_count_rows(char **matrix);
