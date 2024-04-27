@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 14:30:10 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/07 18:19:12 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/24 22:41:44 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ typedef struct s_print_format
 typedef int	(*t_print_service)(t_print_format, va_list);
 
 t_print_flag	get_printf_flag(char c);
-void			parse(int fd,
+void			ft_printf_parse(int fd,
 					const char *format,
 					t_print_format *pf,
 					va_list args \

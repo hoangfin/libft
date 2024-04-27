@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:54:59 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/06 22:24:12 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/24 22:43:21 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	print_format(char const **format, va_list args, t_print_service *ps)
 	if (conversion == NULL)
 		return (write(1, (*format)++, 1));
 	print_format.conversion = *conversion;
-	parse(1, *format, &print_format, args);
+	ft_printf_parse(1, *format, &print_format, args);
 	if (print_format.is_malformed)
 		return (write(1, (*format)++, 1));
 	else

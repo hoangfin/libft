@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 00:04:12 by hoatran           #+#    #+#             */
-/*   Updated: 2024/03/13 14:56:45 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/24 16:15:13 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,22 +30,29 @@ typedef struct s_list
 	int		is_circular;
 }	t_list;
 
-t_node	*ft_list_node(void *data);
-t_list	*ft_list(int is_circular);
-size_t	ft_list_push(t_list *list, t_node *node);
-t_node	*ft_list_shift(t_list *list);
-size_t	ft_list_unshift(t_list *list, t_node *node);
-void	ft_list_foreach(t_list *list, void (*fn)(void *, size_t));
-void	*ft_list_reduce(
-			t_list *list,
-			void *(*fn)(void *, void *, size_t, t_list *),
-			void *initial_value
-			);
 int		ft_list_ceil_index(t_list *list, int number);
 int		ft_list_floor_index(t_list *list, int number);
+size_t	ft_list_push(t_list *list, t_node *node);
+size_t	ft_list_unshift(t_list *list, t_node *node);
 t_bool	ft_list_every(t_list *list, t_bool (*pred)(void *, size_t, t_list *));
 t_bool	ft_list_some(t_list *list, t_bool (*pred)(void *, size_t, t_list *));
 t_list	*ft_list_map(t_list *list, void *(*fn)(void *), void (*delete)(void *));
+t_list	*ft_list(int is_circular);
+t_node	*ft_list_node(void *data);
+t_node	*ft_list_shift(t_list *list);
 void	ft_list_clear(t_list **list, void (*delete)(void *));
+void	ft_list_foreach(t_list *list, void (*fn)(t_node *, size_t));
+
+void	*ft_list_reduce( \
+			t_list *list, \
+			void *(*fn)(void *, void *, size_t, t_list *), \
+			void *initial_value \
+		);
+
+int		ft_list_index_of( \
+			t_list *list, \
+			void *data, \
+			t_bool (*pred)(t_node *, void *) \
+		);
 
 #endif

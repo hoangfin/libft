@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse.c                                            :+:      :+:    :+:   */
+/*   ft_printf_parse.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 00:15:42 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/06 21:38:25 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/24 22:41:18 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,12 @@ static void	parse_prec(const char **format, t_print_format *pf, va_list args)
 		pf->is_malformed = 1;
 }
 
-void	parse(int fd, const char *format, t_print_format *pf, va_list args)
+void	ft_printf_parse(
+	int fd,
+	const char *format,
+	t_print_format *pf,
+	va_list args
+)
 {
 	pf->fd = fd;
 	pf->flag = 0;

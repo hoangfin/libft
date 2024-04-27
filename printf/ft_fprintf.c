@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 21:30:14 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/07 18:20:22 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/24 22:43:03 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	print_format(
 	if (conversion == NULL)
 		return (write(fd, (*format)++, 1));
 	print_format.conversion = *conversion;
-	parse(fd, *format, &print_format, args);
+	ft_printf_parse(fd, *format, &print_format, args);
 	if (print_format.is_malformed)
 		return (write(fd, (*format)++, 1));
 	else

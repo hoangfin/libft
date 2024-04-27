@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_every.c                                         :+:      :+:    :+:   */
+/*   ft_list_index_of.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/14 16:52:35 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/27 20:21:25 by hoatran          ###   ########.fr       */
+/*   Created: 2024/04/23 17:18:59 by hoatran           #+#    #+#             */
+/*   Updated: 2024/04/24 14:11:07 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_array.h"
+#include "libft_list.h"
 
-t_bool	ft_every(
-	void *array,
-	size_t element_size,
-	size_t element_count,
-	t_bool (*predicate)(void *, size_t, void *)
+int	ft_list_index_of(t_list *list, void *data, t_bool (*pred)(t_node *, void *)
 )
 {
-	size_t	i;
-	void	*element_ptr;
+	int		i;
+	t_node	*node;
 
 	i = 0;
-	if (array == NULL || element_count == 0 || predicate == NULL)
-		return (false);
-	while (i < element_count)
+	node = list->head;
+	while (i < (int)list->length)
 	{
-		element_ptr = (char *)array + i * element_size;
-		if (predicate(element_ptr, i, array) == false)
-			return (false);
+		if (pred(node, data))
+			return (i);
+		node = node->next;
 		i++;
 	}
-	return (true);
+	return (-1);
 }
