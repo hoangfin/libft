@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 20:17:05 by hoatran           #+#    #+#             */
-/*   Updated: 2024/03/27 20:36:05 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/28 02:17:04 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,23 @@
  * @returns	{void}
  *
 */
-void	ft_replace(char *str, const char *c_array, int c)
+void	ft_replace(char *str, size_t size, const char *chars, int c)
 {
-	int	i;
+	size_t	str_idx;
+	size_t	i;
 
-	if (str == NULL || *str == '\0' || c_array == NULL || *c_array == '\0')
+	if (*str == '\0' || size == 0 || chars[0] == '\0')
 		return ;
-	while (*str != '\0')
+	str_idx = 0;
+	while (str_idx < size)
 	{
 		i = 0;
-		while (c_array[i] != '\0')
+		while (chars[i] != '\0')
 		{
-			if (*str == c_array[i])
-				*str = c;
+			if (str[str_idx] == chars[i])
+				str[str_idx] = c;
 			i++;
 		}
-		str++;
+		str_idx++;
 	}
 }
