@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 20:53:07 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/28 13:04:38 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/28 17:27:58 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,10 @@ static void	handle_quote(char *str)
 	if (open_quote == NULL)
 		return ;
 	end_quote = find_quote(open_quote + 1);
+	while (end_quote != NULL && *end_quote != *open_quote)
+		end_quote = find_quote(end_quote + 1);
 	if (end_quote == NULL)
-		return ;
+		handle_quote(open_quote + 1);
 	str = end_quote + 1;
 	ft_replace(open_quote, end_quote - open_quote + 1, "\f\n\r\t\v ", 31);
 	handle_quote(str);
