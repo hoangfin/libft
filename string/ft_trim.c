@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 12:02:17 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/28 13:02:35 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/28 13:05:25 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_trim(char *str, int c)
 	j = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] != '\\')
+		if (str[i] != c)
 			str[j++] = str[i];
 		i++;
 	}
