@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 20:53:07 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/28 02:46:09 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/04/28 13:04:38 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,8 @@ static void	handle_quote(char *str)
 
 static char	**split_cmd(char *cmd)
 {
-	const char	patterns[2] = {31, '\0'};
-	char		**tokens;
-	int			i;
+	char	**tokens;
+	int		i;
 
 	handle_quote(cmd);
 	ft_replace(cmd, ft_strlen(cmd), "\f\n\r\t\v", ' ');
@@ -58,7 +57,8 @@ static char	**split_cmd(char *cmd)
 		while (tokens[i] != NULL)
 		{
 			ft_trim_quotes(tokens[i]);
-			ft_replace(tokens[i], ft_strlen(tokens[i]), patterns, ' ');
+			ft_trim(tokens[i], '\\');
+			ft_replace(tokens[i], ft_strlen(tokens[i]), "\x1F", ' ');
 			i++;
 		}
 	}
