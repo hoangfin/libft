@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 01:20:25 by hoatran           #+#    #+#             */
-/*   Updated: 2024/01/19 00:39:31 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/05/01 00:18:22 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_list_clear(t_list **list, void (*delete)(void *))
 	size_t	i;
 
 	if ((*list)->length == 0)
-		return ;
+		return (free(*list));
 	node = (*list)->head;
 	i = 0;
 	while (i < (*list)->length)
