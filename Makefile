@@ -8,6 +8,11 @@ STRING_DIR := ./string
 GNL_DIR := ./gnl
 PRINTF_DIR := ./printf
 
+RED := \033[0;31m
+GREEN := \033[0;32m
+YELLOW := \033[0;33m
+RESET := \033[0m
+
 # Compiler & flags
 CC := cc
 CFLAGS := -g -Wall -Wextra -Werror
@@ -119,15 +124,16 @@ OBJECTS := $(SOURCES:.c=.o)
 # Linux command: ar crs
 # where c = create, r = replace, s = index (as ranlib)
 $(NAME): $(OBJECTS)
-	ar crs $@ $^
+	@ar crs $@ $^
+	@echo "$(YELLOW)✔ $(NAME) $(RESET)created"
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
 clean:
-	rm -f $(COMMON_DIR)/*.o \
+	@rm -f $(COMMON_DIR)/*.o \
 			$(ARRAY_DIR)/*.o \
 			$(LIST_DIR)/*.o \
 			$(STRING_DIR)/*.o \
@@ -135,6 +141,7 @@ clean:
 			$(PRINTF_DIR)/*.o
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "🗑️  $(RED)$(NAME) $(RESET)has been removed."
 
 re: fclean $(NAME)
