@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 00:04:12 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/24 16:15:13 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/05/01 13:15:55 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ typedef struct s_list
 	int		is_circular;
 }	t_list;
 
-int		ft_list_ceil_index(t_list *list, int number);
-int		ft_list_floor_index(t_list *list, int number);
 size_t	ft_list_push(t_list *list, t_node *node);
 size_t	ft_list_unshift(t_list *list, t_node *node);
 t_bool	ft_list_every(t_list *list, t_bool (*pred)(void *, size_t, t_list *));

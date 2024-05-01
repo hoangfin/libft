@@ -80,10 +80,8 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(ARRAY_DIR)/ft_every.c \
 			$(ARRAY_DIR)/ft_some.c \
 			\
-			$(LIST_DIR)/ft_list_ceil_index.c \
 			$(LIST_DIR)/ft_list_clear.c \
 			$(LIST_DIR)/ft_list_every.c \
-			$(LIST_DIR)/ft_list_floor_index.c \
 			$(LIST_DIR)/ft_list_foreach.c \
 			$(LIST_DIR)/ft_list_index_of.c \
 			$(LIST_DIR)/ft_list_map.c \
