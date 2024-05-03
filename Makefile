@@ -125,7 +125,6 @@ OBJECTS := $(SOURCES:.c=.o)
 # where c = create, r = replace, s = index (as ranlib)
 $(NAME): $(OBJECTS)
 	@ar crs $@ $^
-	@echo "$(YELLOW)✔ $(NAME) $(RESET)created"
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -142,6 +141,5 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "🗑️  $(RED)$(NAME) $(RESET)has been removed."
 
 re: fclean $(NAME)
