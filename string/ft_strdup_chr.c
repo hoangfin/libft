@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 18:12:21 by hoatran           #+#    #+#             */
-/*   Updated: 2024/02/09 21:18:31 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/05/13 23:09:34 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strdup_chr(char *source, char delimiter)
 	while (source[length] != '\0' && source[length] != delimiter)
 		length++;
 	dup = (char *)malloc((length + 1) * sizeof(char));
+	if (dup == NULL)
+		return (NULL);
 	length = 0;
 	while (source[length] != '\0' && source[length] != delimiter)
 	{
