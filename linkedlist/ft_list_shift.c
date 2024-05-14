@@ -6,20 +6,11 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 21:35:11 by hoatran           #+#    #+#             */
-/*   Updated: 2024/01/19 00:39:31 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/05/14 15:29:35 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_list.h"
-
-/**
- * The ft_linkedlist_shift() function removes the first node from a linked list
- * and returns that removed node.
- *
- * This function changes the length of the linked list.
- *
- * @returns {t_node} node The node that has been removed from the linked list.
-*/
 
 static t_node	*ft_circular_list_shift(t_list *list)
 {
@@ -72,6 +63,14 @@ static t_node	*ft_linear_list_shift(t_list *list)
 	return (detached_node);
 }
 
+/**
+ * The ft_list_shift() function removes the first node from a linked list
+ * and returns that removed node.
+ *
+ * This function changes the length of the linked list.
+ *
+ * @returns {t_node} node The node that has been removed from the linked list.
+*/
 t_node	*ft_list_shift(t_list *list)
 {
 	if (list->is_circular)
