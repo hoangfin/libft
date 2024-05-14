@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 00:04:12 by hoatran           #+#    #+#             */
-/*   Updated: 2024/05/01 13:15:55 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/05/14 16:54:55 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,16 @@ t_list	*ft_list_map(t_list *list, void *(*fn)(void *), void (*delete)(void *));
 t_list	*ft_list(int is_circular);
 t_node	*ft_list_node(void *data);
 t_node	*ft_list_shift(t_list *list);
+t_node	*ft_list_pop(t_list *list);
 void	ft_list_clear(t_list **list, void (*delete)(void *));
 void	ft_list_foreach(t_list *list, void (*fn)(t_node *, size_t));
+void	ft_list_remove(t_list *list, int index, void (*delete)(void *));
+
+t_node	*ft_list_find(\
+			t_list *list, \
+			void *data, \
+			t_bool (*pred)(t_node *, void *) \
+		);
 
 void	*ft_list_reduce( \
 			t_list *list, \

@@ -96,6 +96,9 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(LIST_DIR)/ft_list_shift.c \
 			$(LIST_DIR)/ft_list_some.c \
 			$(LIST_DIR)/ft_list_unshift.c \
+			$(LIST_DIR)/ft_list_pop.c \
+			$(LIST_DIR)/ft_list_remove.c \
+			$(LIST_DIR)/ft_list_find.c \
 			$(LIST_DIR)/ft_list.c \
 			\
 			$(GNL_DIR)/get_next_line.c \
