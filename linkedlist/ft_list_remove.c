@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 14:43:58 by hoatran           #+#    #+#             */
-/*   Updated: 2024/05/14 18:16:33 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/05/14 20:53:43 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,22 @@ void	ft_list_remove(
 	matched_node = ft_list_find(list, data, pred);
 	if (matched_node == NULL)
 		return ;
-	prev_node = matched_node->prev;
-	next_node = matched_node->next;
-	matched_node->next = NULL;
-	matched_node->prev = NULL;
-	delete(matched_node->data);
+	if (matched_node == list->head)
+		ft_list_shift(list);
+	else if (matched_node == list->tail)
+		ft_list_pop(list);
+	else
+	{
+		prev_node = matched_node->prev;
+		next_node = matched_node->next;
+		matched_node->next = NULL;
+		matched_node->prev = NULL;
+		prev_node->next = next_node;
+		next_node->prev = prev_node;
+		list->length--;
+	}
+	if (delete != NULL)
+		delete(matched_node->data);
 	free(matched_node);
 	return ;
 }
