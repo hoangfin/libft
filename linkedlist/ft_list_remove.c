@@ -6,29 +6,31 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 14:43:58 by hoatran           #+#    #+#             */
-/*   Updated: 2024/05/14 17:14:25 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/05/14 18:16:33 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_list.h"
 
-void	ft_list_remove(t_list *list, int index, void (*delete)(void *))
+void	ft_list_remove(
+	t_list *list,
+	void *data,
+	t_bool (*pred)(t_node *, void *),
+	void (*delete)(void *)
+)
 {
-	t_node	*detached_node;
+	t_node	*matched_node;
+	t_node	*prev_node;
+	t_node	*next_node;
 
-	detached_node = NULL;
-	if (list->length == 0 || index < 0)
+	matched_node = ft_list_find(list, data, pred);
+	if (matched_node == NULL)
 		return ;
-	if (index == 0)
-		detached_node = ft_list_shift(list);
-	else if (index == (int)list->length - 1)
-		detached_node = ft_list_pop(list);
-	// else
-	// {
-		// detached_node = ft_list_find_by_index(list, index);
-
-	// }
-	delete(detached_node->data);
-	free(detached_node);
+	prev_node = matched_node->prev;
+	next_node = matched_node->next;
+	matched_node->next = NULL;
+	matched_node->prev = NULL;
+	delete(matched_node->data);
+	free(matched_node);
 	return ;
 }

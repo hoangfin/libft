@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 00:04:12 by hoatran           #+#    #+#             */
-/*   Updated: 2024/05/14 16:54:55 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/05/14 18:17:14 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,13 @@ t_node	*ft_list_shift(t_list *list);
 t_node	*ft_list_pop(t_list *list);
 void	ft_list_clear(t_list **list, void (*delete)(void *));
 void	ft_list_foreach(t_list *list, void (*fn)(t_node *, size_t));
-void	ft_list_remove(t_list *list, int index, void (*delete)(void *));
+
+void	ft_list_remove(\
+			t_list *list, \
+			void *data, \
+			t_bool (*pred)(t_node *, void *), \
+			void (*delete)(void *) \
+		);
 
 t_node	*ft_list_find(\
 			t_list *list, \
