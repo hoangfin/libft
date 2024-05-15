@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:43:41 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/28 13:03:00 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/05/15 18:51:59 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ char		*ft_join_strings(int num_of_strings, ...);
 void		ft_trim_quotes(char	*str);
 t_bool		ft_has_spaces_only(const char *str);
 void		ft_trim(char *str, int c);
+char		*ft_get_next_token(const char *str, const char *delimiter);
 
 #endif
