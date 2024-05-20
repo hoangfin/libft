@@ -65,6 +65,7 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(STRING_DIR)/ft_del_str_arr.c \
 			$(STRING_DIR)/ft_ends_with.c \
 			$(STRING_DIR)/ft_getenv.c \
+			$(STRING_DIR)/ft_has_space.c \
 			$(STRING_DIR)/ft_has_spaces_only.c \
 			$(STRING_DIR)/ft_join_strings.c \
 			$(STRING_DIR)/ft_join.c \
