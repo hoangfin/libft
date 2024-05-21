@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 14:20:35 by hoatran           #+#    #+#             */
-/*   Updated: 2024/01/19 00:37:57 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/05/21 16:59:35 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	is_space(char c)
 	return (0);
 }
 
-static long	convert_pos(const char *num_str)
+static long	convert_pos(const char *num_str, t_bool *overflow)
 {
 	long	number;
 
@@ -27,17 +27,25 @@ static long	convert_pos(const char *num_str)
 	while (ft_isdigit(*num_str))
 	{
 		if (number > LONG_MAX / 10)
+		{
+			if (overflow != NULL)
+				*overflow = true;
 			return (-1);
+		}
 		number = number * 10;
 		if (number > LONG_MAX - (*num_str - '0'))
+		{
+			if (overflow != NULL)
+				*overflow = true;
 			return (-1);
+		}
 		number += (*num_str - '0');
 		num_str++;
 	}
 	return (number);
 }
 
-static long	convert_neg(const char *num_str)
+static long	convert_neg(const char *num_str, t_bool *overflow)
 {
 	long	number;
 
@@ -45,10 +53,18 @@ static long	convert_neg(const char *num_str)
 	while (ft_isdigit(*num_str))
 	{
 		if (number < LONG_MIN / 10)
+		{
+			if (overflow != NULL)
+				*overflow = true;
 			return (0);
+		}
 		number = number * 10;
 		if (number < LONG_MIN + (*num_str - '0'))
+		{
+			if (overflow != NULL)
+				*overflow = true;
 			return (0);
+		}
 		number -= (*num_str - '0');
 		num_str++;
 	}
@@ -65,7 +81,7 @@ static long	convert_neg(const char *num_str)
  *
  * @returns	{long}		The converted value or 0 on error.
 */
-long	ft_atol(const char *str)
+long	ft_atol(const char *str, t_bool *overflow)
 {
 	char	sign;
 	long	number;
@@ -79,8 +95,8 @@ long	ft_atol(const char *str)
 		str++;
 	}
 	if (sign == '+')
-		number = convert_pos(str);
+		number = convert_pos(str, overflow);
 	else
-		number = convert_neg(str);
+		number = convert_neg(str, overflow);
 	return (number);
 }

@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 23:47:52 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/22 17:12:40 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/05/21 17:00:57 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 
 int		ft_atoi(const char *str, t_bool *overflow);
-long	ft_atol(const char *str);
+long	ft_atol(const char *str, t_bool *overflow);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
