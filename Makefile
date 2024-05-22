@@ -62,6 +62,7 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(COMMON_DIR)/ft_ultoa.c \
 			$(COMMON_DIR)/ft_utoa.c \
 			\
+			$(STRING_DIR)/ft_concat.c \
 			$(STRING_DIR)/ft_del_str_arr.c \
 			$(STRING_DIR)/ft_ends_with.c \
 			$(STRING_DIR)/ft_getenv.c \
