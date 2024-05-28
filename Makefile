@@ -87,6 +87,7 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(ARRAY_DIR)/ft_every.c \
 			$(ARRAY_DIR)/ft_some.c \
 			\
+			$(LIST_DIR)/ft_list_clone.c \
 			$(LIST_DIR)/ft_list_clear.c \
 			$(LIST_DIR)/ft_list_every.c \
 			$(LIST_DIR)/ft_list_foreach.c \
