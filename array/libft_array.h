@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 15:07:37 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/27 20:22:44 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/05/31 21:01:03 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,13 @@ typedef struct s_array
 
 t_array	*ft_array(size_t e_size);
 t_array	*ft_array_from(void *src_array, size_t length, size_t e_size);
+
+void	ft_array_delete(\
+			void **arr_ptr, \
+			size_t element_size, \
+			size_t element_count, \
+			void (*delete)(void *) \
+		);
 
 void	ft_for_each(\
 			void *array, \

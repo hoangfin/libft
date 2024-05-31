@@ -81,10 +81,11 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(STRING_DIR)/ft_trim_quotes.c \
 			$(STRING_DIR)/ft_trim.c \
 			\
-			$(ARRAY_DIR)/ft_array.c \
+			$(ARRAY_DIR)/ft_array_delete.c \
 			$(ARRAY_DIR)/ft_array_from.c \
-			$(ARRAY_DIR)/ft_for_each.c \
+			$(ARRAY_DIR)/ft_array.c \
 			$(ARRAY_DIR)/ft_every.c \
+			$(ARRAY_DIR)/ft_for_each.c \
 			$(ARRAY_DIR)/ft_some.c \
 			\
 			$(LIST_DIR)/ft_list_clone.c \
