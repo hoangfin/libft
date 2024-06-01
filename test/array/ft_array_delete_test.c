@@ -9,15 +9,15 @@ int main(void)
 	command[2] = ft_strdup("def");
 	command[3] = NULL;
 	printf("%s\n", command[2]);
-	ft_array_delete((void **)&command, sizeof(char *), 4, free);
-	printf("%d\n", command == NULL);
+	ft_array_delete(command, sizeof(char *), 4, free);
+	// printf("%d\n", command == NULL);
 
 	int *numbers = (int *)malloc(4 * sizeof(int));
 	numbers[0] = 0;
 	numbers[1] = 1;
 	numbers[2] = 2;
 	numbers[3] = 3;
-	ft_array_delete((void **)&numbers, sizeof(int), 4, NULL);
-	printf("%d\n", numbers == NULL);
+	ft_array_delete(numbers, sizeof(int), 4, NULL);
+	// printf("%d\n", numbers == NULL);
 	return (0);
 }

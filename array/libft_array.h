@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 15:07:37 by hoatran           #+#    #+#             */
-/*   Updated: 2024/05/31 21:01:03 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/06/01 23:03:07 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_array	*ft_array(size_t e_size);
 t_array	*ft_array_from(void *src_array, size_t length, size_t e_size);
 
 void	ft_array_delete(\
-			void **arr_ptr, \
+			void *array, \
 			size_t element_size, \
 			size_t element_count, \
 			void (*delete)(void *) \
