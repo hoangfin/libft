@@ -51,7 +51,6 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(COMMON_DIR)/ft_strlen.c \
 			$(COMMON_DIR)/ft_strmapi.c \
 			$(COMMON_DIR)/ft_strncmp.c \
-			$(COMMON_DIR)/ft_strnstr.c \
 			$(COMMON_DIR)/ft_strrchr.c \
 			$(COMMON_DIR)/ft_strtrim.c \
 			$(COMMON_DIR)/ft_substr.c \
@@ -74,11 +73,12 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(STRING_DIR)/ft_matrix_delete.c \
 			$(STRING_DIR)/ft_matrix.c \
 			$(STRING_DIR)/ft_parse_cmd.c \
+			$(STRING_DIR)/ft_remove_quote_pair.c \
 			$(STRING_DIR)/ft_replace.c \
 			$(STRING_DIR)/ft_starts_with.c \
 			$(STRING_DIR)/ft_strdup_chr.c \
 			$(STRING_DIR)/ft_string.c \
-			$(STRING_DIR)/ft_remove_quote_pair.c \
+			$(STRING_DIR)/ft_strnstr.c \
 			$(STRING_DIR)/ft_trim_quotes.c \
 			$(STRING_DIR)/ft_trim.c \
 			\
