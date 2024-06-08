@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 13:23:08 by hoatran           #+#    #+#             */
-/*   Updated: 2024/06/07 22:50:20 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/06/08 13:18:34 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,26 +27,13 @@
 */
 char	*ft_strnstr(const char *str, const char *search, size_t n)
 {
-	size_t	i;
-	size_t	str_length;
-	size_t	search_length;
-
 	if (*search == '\0')
 		return ((char *)str);
-	if (n == 0)
-		return (NULL);
-	i = 0;
-	str_length = ft_strlen(str);
-	search_length = ft_strlen(search);
-	if (str_length < search_length)
-		return (NULL);
-	while (i < n)
+	while (*str != '\0')
 	{
-		if (search_length > n - i)
-			return (NULL);
-		if (ft_strncmp(str + i, search, search_length) == 0)
-			return ((char *)str + i);
-		i++;
+		if (ft_strncmp(str, search, n) == 0)
+			return ((char *)str);
+		str++;
 	}
 	return (NULL);
 }
