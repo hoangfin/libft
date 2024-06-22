@@ -96,6 +96,7 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(LIST_DIR)/ft_list_index_of.c \
 			$(LIST_DIR)/ft_list_map.c \
 			$(LIST_DIR)/ft_list_node.c \
+			$(LIST_DIR)/ft_list_push_all.c \
 			$(LIST_DIR)/ft_list_push.c \
 			$(LIST_DIR)/ft_list_reduce.c \
 			$(LIST_DIR)/ft_list_shift.c \
