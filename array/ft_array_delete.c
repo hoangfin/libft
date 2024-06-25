@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 20:17:12 by hoatran           #+#    #+#             */
-/*   Updated: 2024/06/01 23:07:59 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/06/25 15:48:25 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ void	ft_array_delete(
 {
 	size_t	i;
 	void	*element;
+
 	i = 0;
 	while (i < element_count)
 	{
 		element = (char *)array + i * element_size;
-        if (delete != NULL) {
-            delete(*((void **)element));
-        }
+		if (delete != NULL)
+			delete(*((void **)element));
 		i++;
 	}
 	free(array);
