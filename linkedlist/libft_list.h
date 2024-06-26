@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 00:04:12 by hoatran           #+#    #+#             */
-/*   Updated: 2024/06/22 18:04:10 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/06/26 12:52:01 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ typedef struct s_list
 
 int		ft_list_push_all(t_list *dest, t_list *src, void *(*copy)(void *));
 int		ft_list_push(t_list *list, void *data);
+int		ft_list_for_each(\
+			t_list *list, \
+			void *data, \
+			int (*fn)(t_node *, void *, size_t) \
+		);
+
 size_t	ft_list_unshift(t_list *list, t_node *node);
 t_bool	ft_list_every(t_list *list, t_bool (*pred)(void *, size_t, t_list *));
 t_bool	ft_list_some(t_list *list, t_bool (*pred)(void *, size_t, t_list *));

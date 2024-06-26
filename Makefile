@@ -89,34 +89,35 @@ SOURCES :=	$(COMMON_DIR)/ft_atoi.c \
 			$(ARRAY_DIR)/ft_for_each.c \
 			$(ARRAY_DIR)/ft_some.c \
 			\
-			$(LIST_DIR)/ft_list_clone.c \
 			$(LIST_DIR)/ft_list_clear.c \
+			$(LIST_DIR)/ft_list_clone.c \
 			$(LIST_DIR)/ft_list_every.c \
+			$(LIST_DIR)/ft_list_find.c \
+			$(LIST_DIR)/ft_list_for_each.c \
 			$(LIST_DIR)/ft_list_foreach.c \
 			$(LIST_DIR)/ft_list_index_of.c \
 			$(LIST_DIR)/ft_list_map.c \
 			$(LIST_DIR)/ft_list_node.c \
+			$(LIST_DIR)/ft_list_pop.c \
 			$(LIST_DIR)/ft_list_push_all.c \
 			$(LIST_DIR)/ft_list_push.c \
 			$(LIST_DIR)/ft_list_reduce.c \
+			$(LIST_DIR)/ft_list_remove.c \
 			$(LIST_DIR)/ft_list_shift.c \
 			$(LIST_DIR)/ft_list_some.c \
 			$(LIST_DIR)/ft_list_to_array.c \
 			$(LIST_DIR)/ft_list_unshift.c \
-			$(LIST_DIR)/ft_list_pop.c \
-			$(LIST_DIR)/ft_list_remove.c \
-			$(LIST_DIR)/ft_list_find.c \
 			$(LIST_DIR)/ft_list.c \
 			\
 			$(GNL_DIR)/get_next_line.c \
 			\
 			$(PRINTF_DIR)/ft_fprintf.c \
+			$(PRINTF_DIR)/ft_printf_parse.c \
 			$(PRINTF_DIR)/ft_printf.c \
 			$(PRINTF_DIR)/ft_printf.h \
 			$(PRINTF_DIR)/get_printf_flag.c \
 			$(PRINTF_DIR)/is_conversion.c \
 			$(PRINTF_DIR)/is_flag.c \
-			$(PRINTF_DIR)/ft_printf_parse.c \
 			$(PRINTF_DIR)/print_c.c \
 			$(PRINTF_DIR)/print_d.c \
 			$(PRINTF_DIR)/print_p.c \
