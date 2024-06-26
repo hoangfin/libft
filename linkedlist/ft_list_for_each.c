@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 12:47:57 by hoatran           #+#    #+#             */
-/*   Updated: 2024/06/26 12:51:21 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/06/26 14:16:30 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_list_for_each(
 	t_node	*node;
 
 	if (list->length == 0)
-		return ;
+		return (0);
 	i = 0;
 	node = list->head;
 	while (i < list->length)
@@ -37,4 +37,3 @@ int	ft_list_for_each(
 	}
 	return (0);
 }
-
