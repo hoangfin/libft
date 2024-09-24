@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 14:20:35 by hoatran           #+#    #+#             */
-/*   Updated: 2024/05/21 16:59:35 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/09/25 00:27:59 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	is_space(char c)
 	return (0);
 }
 
-static long	convert_pos(const char *num_str, t_bool *overflow)
+static long	convert_pos(const char *num_str, int *overflow)
 {
 	long	number;
 
@@ -29,14 +29,14 @@ static long	convert_pos(const char *num_str, t_bool *overflow)
 		if (number > LONG_MAX / 10)
 		{
 			if (overflow != NULL)
-				*overflow = true;
+				*overflow = 1;
 			return (-1);
 		}
 		number = number * 10;
 		if (number > LONG_MAX - (*num_str - '0'))
 		{
 			if (overflow != NULL)
-				*overflow = true;
+				*overflow = 1;
 			return (-1);
 		}
 		number += (*num_str - '0');
@@ -45,7 +45,7 @@ static long	convert_pos(const char *num_str, t_bool *overflow)
 	return (number);
 }
 
-static long	convert_neg(const char *num_str, t_bool *overflow)
+static long	convert_neg(const char *num_str, int *overflow)
 {
 	long	number;
 
@@ -55,14 +55,14 @@ static long	convert_neg(const char *num_str, t_bool *overflow)
 		if (number < LONG_MIN / 10)
 		{
 			if (overflow != NULL)
-				*overflow = true;
+				*overflow = 1;
 			return (0);
 		}
 		number = number * 10;
 		if (number < LONG_MIN + (*num_str - '0'))
 		{
 			if (overflow != NULL)
-				*overflow = true;
+				*overflow = 1;
 			return (0);
 		}
 		number -= (*num_str - '0');
@@ -81,7 +81,7 @@ static long	convert_neg(const char *num_str, t_bool *overflow)
  *
  * @returns	{long}		The converted value or 0 on error.
 */
-long	ft_atol(const char *str, t_bool *overflow)
+long	ft_atol(const char *str, int *overflow)
 {
 	char	sign;
 	long	number;

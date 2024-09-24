@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 00:04:12 by hoatran           #+#    #+#             */
-/*   Updated: 2024/06/26 12:52:01 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/09/25 00:29:14 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ int		ft_list_for_each(\
 		);
 
 size_t	ft_list_unshift(t_list *list, t_node *node);
-t_bool	ft_list_every(t_list *list, t_bool (*pred)(void *, size_t, t_list *));
-t_bool	ft_list_some(t_list *list, t_bool (*pred)(void *, size_t, t_list *));
+int	ft_list_every(t_list *list, int (*pred)(void *, size_t, t_list *));
+int	ft_list_some(t_list *list, int (*pred)(void *, size_t, t_list *));
 void	*ft_list_to_array(t_list *list, size_t element_size);
 t_list	*ft_list_map(t_list *list, void *(*fn)(void *), void (*delete)(void *));
 t_list	*ft_list(int is_circular);
@@ -59,14 +59,14 @@ t_list	*ft_list_clone(\
 void	ft_list_remove(\
 			t_list *list, \
 			void *data, \
-			t_bool (*pred)(t_node *, void *), \
+			int (*pred)(t_node *, void *), \
 			void (*delete)(void *) \
 		);
 
 t_node	*ft_list_find(\
 			t_list *list, \
 			void *data, \
-			t_bool (*pred)(t_node *, void *) \
+			int (*pred)(t_node *, void *) \
 		);
 
 void	*ft_list_reduce( \
@@ -78,7 +78,7 @@ void	*ft_list_reduce( \
 int		ft_list_index_of( \
 			t_list *list, \
 			void *data, \
-			t_bool (*pred)(t_node *, void *) \
+			int (*pred)(t_node *, void *) \
 		);
 
 #endif

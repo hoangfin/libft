@@ -6,17 +6,17 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 16:52:35 by hoatran           #+#    #+#             */
-/*   Updated: 2024/04/27 20:21:25 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/09/25 00:25:56 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_array.h"
 
-t_bool	ft_every(
+int	ft_every(
 	void *array,
 	size_t element_size,
 	size_t element_count,
-	t_bool (*predicate)(void *, size_t, void *)
+	int (*predicate)(void *, size_t, void *)
 )
 {
 	size_t	i;
@@ -24,13 +24,13 @@ t_bool	ft_every(
 
 	i = 0;
 	if (array == NULL || element_count == 0 || predicate == NULL)
-		return (false);
+		return (0);
 	while (i < element_count)
 	{
 		element_ptr = (char *)array + i * element_size;
-		if (predicate(element_ptr, i, array) == false)
-			return (false);
+		if (predicate(element_ptr, i, array) == 0)
+			return (0);
 		i++;
 	}
-	return (true);
+	return (1);
 }

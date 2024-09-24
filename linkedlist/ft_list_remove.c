@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 14:43:58 by hoatran           #+#    #+#             */
-/*   Updated: 2024/05/14 20:53:43 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/09/25 00:28:49 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_list_remove(
 	t_list *list,
 	void *data,
-	t_bool (*pred)(t_node *, void *),
+	int (*pred)(t_node *, void *),
 	void (*delete)(void *)
 )
 {

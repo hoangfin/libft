@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:43:41 by hoatran           #+#    #+#             */
-/*   Updated: 2024/06/07 22:48:12 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/09/25 00:30:23 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ typedef struct s_grid
 
 t_string	*ft_string(char *str);
 
-t_bool		ft_ends_with(const char *string, const char *search_string);
-t_bool		ft_has_space(const char *str);
-t_bool		ft_has_spaces_only(const char *str);
-t_bool		ft_starts_with(const char *string, const char *search_string);
+int		ft_ends_with(const char *string, const char *search_string);
+int		ft_has_space(const char *str);
+int		ft_has_spaces_only(const char *str);
+int		ft_starts_with(const char *string, const char *search_string);
 
 char		*ft_getenv(const char *key, char **envp);
 char		*ft_join_strings(int num_of_strings, ...);

@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 16:46:33 by hoatran           #+#    #+#             */
-/*   Updated: 2024/05/14 16:53:05 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/09/25 00:28:25 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 t_node	*ft_list_find(
 	t_list *list,
 	void *data,
-	t_bool (*pred)(t_node *, void *)
+	int (*pred)(t_node *, void *)
 )
 {
 	size_t	i;

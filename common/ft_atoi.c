@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoatran <hoatran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 14:20:35 by hoatran           #+#    #+#             */
-/*   Updated: 2024/03/12 14:36:10 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/09/25 00:27:06 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	is_space(char c)
 	return (0);
 }
 
-static int	convert_pos(const char *num_str, t_bool *overflow)
+static int	convert_pos(const char *num_str, int *overflow)
 {
 	long	number;
 
@@ -30,14 +30,14 @@ static int	convert_pos(const char *num_str, t_bool *overflow)
 		if (number > INT_MAX / 10)
 		{
 			if (overflow != NULL)
-				*overflow = true;
+				*overflow = 1;
 			return (-1);
 		}
 		number = number * 10;
 		if (number > INT_MAX - (*num_str - '0'))
 		{
 			if (overflow != NULL)
-				*overflow = true;
+				*overflow = 1;
 			return (-1);
 		}
 		number += (*num_str - '0');
@@ -46,7 +46,7 @@ static int	convert_pos(const char *num_str, t_bool *overflow)
 	return ((int)number);
 }
 
-static int	convert_neg(const char *num_str, t_bool *overflow)
+static int	convert_neg(const char *num_str, int *overflow)
 {
 	long	number;
 
@@ -56,14 +56,14 @@ static int	convert_neg(const char *num_str, t_bool *overflow)
 		if (number < INT_MIN / 10)
 		{
 			if (overflow != NULL)
-				*overflow = true;
+				*overflow = 1;
 			return (0);
 		}
 		number = number * 10;
 		if (number < INT_MIN + (*num_str - '0'))
 		{
 			if (overflow != NULL)
-				*overflow = true;
+				*overflow = 1;
 			return (0);
 		}
 		number -= (*num_str - '0');
@@ -82,7 +82,7 @@ static int	convert_neg(const char *num_str, t_bool *overflow)
  *
  * @returns	{int}		The converted value or 0 on error.
 */
-int	ft_atoi(const char *str, t_bool *overflow)
+int	ft_atoi(const char *str, int *overflow)
 {
 	char	sign;
 	int		number;

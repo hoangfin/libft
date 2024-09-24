@@ -6,7 +6,7 @@
 /*   By: hoatran <hoatran@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 15:07:37 by hoatran           #+#    #+#             */
-/*   Updated: 2024/06/01 23:03:07 by hoatran          ###   ########.fr       */
+/*   Updated: 2024/09/25 00:26:39 by hoatran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,13 @@ void	ft_for_each(\
 			void (*callback)(void *, size_t, void *) \
 		);
 
-t_bool	ft_some(t_array *array, t_bool (*pred)(void *, size_t, t_array *));
+int	ft_some(t_array *array, int (*pred)(void *, size_t, t_array *));
 
-t_bool	ft_every(\
+int	ft_every(\
 			void *array, \
 			size_t element_size, \
 			size_t element_count, \
-			t_bool (*predicate)(void *, size_t, void *) \
+			int (*predicate)(void *, size_t, void *) \
 		);
 
 #endif
